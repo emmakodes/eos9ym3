@@ -13,7 +13,7 @@ RUN conda install -n eos9ym3-py27 openbabel-3.1.1-py312h7d6d27c_9.conda -y
 RUN conda install -n eos9ym3-py27 -c conda-forge mopac -y
 RUN conda install -n eos9ym3-py27 pip -y
 RUN CONDA_PATH=$(dirname $(dirname $(which conda))) && PYTHON_ENV_PATH="${CONDA_PATH}/envs/eos9ym3-py27/bin/python" && $PYTHON_ENV_PATH -m pip install rdkit && $PYTHON_ENV_PATH -m pip install scikit-learn && $PYTHON_ENV_PATH -m pip install numpy && $PYTHON_ENV_PATH -m pip install pandas && $PYTHON_ENV_PATH -m pip install tensorFlow && $PYTHON_ENV_PATH -m pip install keras && $PYTHON_ENV_PATH -m pip install pip install matplotlib
-
+RUN pip install rdkit
 # RUN pip install rdkit
 # RUN conda install -c conda-forge openbabel
 # RUN pip install numpy
