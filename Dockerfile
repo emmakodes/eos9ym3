@@ -7,6 +7,12 @@ RUN sudo apt install gfortran-7 -y
 RUN sudo apt install libfontconfig1 libxrender1 -y
 RUN conda create -n eos9ym3-py27 python=3.7 -y
 # RUN conda install -n eos9ym3-py27 -c rdkit rdkit=2018.09.3 -y
+
+RUN conda activate eos9ym3-py27
+RUN conda conda install -n eos9ym3-py27 conda --force-reinstall
+RUN conda install conda -n eos9ym3-py27 --force-reinstall
+RUN conda update -n eos9ym3-py27 --all
+
 RUN conda install -n eos9ym3-py27 -c rdkit -y
 RUN wget https://anaconda.org/conda-forge/openbabel/3.1.1/download/linux-aarch64/openbabel-3.1.1-py312h7d6d27c_9.conda
 RUN conda install -n eos9ym3-py27 openbabel-3.1.1-py312h7d6d27c_9.conda -y

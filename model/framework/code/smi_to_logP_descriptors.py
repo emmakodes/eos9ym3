@@ -1,4 +1,4 @@
-import openbabel
+
 import argparse
 from rdkit import Chem
 from pathlib import Path
@@ -9,7 +9,7 @@ from rdkit.Chem.rdMolDescriptors import GetUSRCAT
 from rdkonf6 import RDKonf
 import pandas as pd
 import numpy as np
-
+import openbabel
 print(RDKonf)
 
 class MRLogPDescriptor_Generator:
