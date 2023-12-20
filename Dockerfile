@@ -2,10 +2,10 @@ FROM bentoml/model-server:0.11.0-py37
 MAINTAINER ersilia
 
 RUN sudo apt update -y
-RUN sudo apt install python2.7 -y
+RUN sudo apt install python3.7 -y
 RUN sudo apt install gfortran-7 -y
 RUN sudo apt install libfontconfig1 libxrender1 -y
-RUN conda create -n eos9ym3-py27 python=2.7 -y
+RUN conda create -n eos9ym3-py27 python=3.7 -y
 RUN conda install -n eos9ym3-py27 -c rdkit rdkit=2018.09.3 -y
 RUN wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
 RUN conda install -n eos9ym3-py27 openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y
